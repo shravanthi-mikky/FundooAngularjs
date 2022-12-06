@@ -1,15 +1,16 @@
 var app= angular.module("postserviceapp",[]);
 
 app.controller("postServiceCtrl",function($scope,$http){
-    $scope.name=null;
-    $scope.age=null;
-    $scope.address=null;
+    $scope.firstName=null;
+    $scope.lastName=null;
+    $scope.email=null;
+    $scope.password=null;
 
     $scope.postdata=function(firstName,lastName,email, password){
         var data={
             firstName:firstName,
             lastName:lastName,
-            emailId:email,
+            email:email,
             password:password
         }
         //call the service
