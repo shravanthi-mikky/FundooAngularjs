@@ -1,6 +1,6 @@
-var app= angular.module("postserviceapp",[]);
+var app= angular.module("postserviceapp",['ngstorage']);
 
-app.controller("loginCtrl",function($scope,$http){
+app.controller("loginCtrl",function($scope,$http,$localStorage/* ,$window */){
     $scope.email=null;
     $scope.password=null;
 
@@ -15,8 +15,11 @@ app.controller("loginCtrl",function($scope,$http){
             console.log(response);
 
             if(response.data){
-                $scope.msg="Post Data Submitted";
 
+                $localStorage.message = response.data.token;
+                console.log($localStorage.message);
+                /* var url = "Dashboard.html";
+                $window.location.href = url; */
                 $scope.email=response.data.email;
                 $scope.password=response.data.password;
             }
