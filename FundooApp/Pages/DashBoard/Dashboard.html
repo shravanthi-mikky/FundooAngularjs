@@ -4,9 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DashBoard</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="DashBoard.css">
+
 </head>
 <body>
-    
+    <div class='main'>
+        <div class='header'>
+          <div class='icon part-one'>
+            <img src='ThreeLines.png' width='20' height='18'/>
+              <img src='KeepIcon.png' width='35'/>
+              <div class='keep'> Keep</div>
+          </div>
+          <div class='icon1 part-two'>
+              <input placeholder="Search" class='searchBar' ></input>
+          </div>
+          <div class='icon part-three'>
+            <img src='viewRefresh.png' width='23' height='23'/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-view-stacked" viewBox="0 0 16 16">
+                <path d="M3 0h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3zm0 8h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H3z"/>
+              </svg>
+            <img src='settings.png' width='25'/>
+          </div>
+          <div class='icon part-four'>
+            <img src='appsIcon.png' width='23' height='23' />
+            <img src='Accounts.png' width='30'/>
+          </div>
+        </div>
+
+        <div id="mySidenav" class="sidenav">
+            <div class="navOne">
+                <a href="#" class="sidenavdiv" id="Notes">
+                    <img src='NotesIcon.png.crdownload' width='15'/>
+                </a>
+                <a href="#" class="sidenavdiv" id="Remainder">
+                    <img src='RemainderIcon.png' width='15'/>
+                </a>
+                <a href="#" class="sidenavdiv" id="Label">
+                    <img src='EditLabelsIcon.png' width='15'/> 
+                </a>
+                <a href="#" class="sidenavdiv" id="Archive">
+                    <img src='ArchiveIcon.png' width='20'/>
+                    </a>
+                <a href="#" class="sidenavdiv" id="Trash">
+                    <img src='TrashIcon.png' width='20'/>
+                    </a>
+            </div>
+                <div class="navTwo">
+                    <p>Notes</p>
+                    <p>Remainder</p>
+                    <p>Label</p>
+                    <p>Archive</p>
+                    <p>Trash</p>
+                </div>
+          </div>
+      </div>
+      <div>
+        <!-- <notescomponent></notesComponent> -->
+      </div>
+ </div>
+ <notes-list></notes-list>
 </body>
+<!-- <script src="DashBoard.js"></script> -->
+<script src="../../Notes/app.js"></script>
+<script src="../../Notes/notes-list.component.js"></script>
+
 </html>
