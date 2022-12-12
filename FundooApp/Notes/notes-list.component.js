@@ -1,17 +1,17 @@
 angular.
-module("postserviceapp").component('notescomponent',{
-    templateUrl:"Notes.html",
+module("postserviceapp").component('notesList',{
+    templateUrl:"FundooApp/Notes/Notes.html",
 }).controller('TakeNoteCtrl',function($scope,$http){
     var note=this;
     note.toggle=false;
-    $scope.showButtons=[0];
-
+    $scope.showButtons = [0];
+    
     $scope.toggle1 = function(){
-        $scope.showButtons=[1];
-        note.toggle=true;
+        $scope.showButtons = [1];
+        /* note.toggle=true; */
     };
 
-    $scope.postdata=function(){
+    $scope.postdata=function(title,note){
         var data = {
             title :title,
             note:note,
